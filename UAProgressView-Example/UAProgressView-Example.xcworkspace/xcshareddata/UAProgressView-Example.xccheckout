@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>C0FF49A1-1336-463B-A1F3-FCCC16EB173B</string>
+	<string>1ED47FC7-62F5-4550-A3DF-B2FD969399A8</string>
 	<key>IDESourceControlProjectName</key>
 	<string>UAProgressView-Example</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>74D442D5-6C39-43E8-9DBD-4EC95AF21215</key>
-		<string>ssh://github.com/UrbanApps/UAProgressView.git</string>
+		<key>28EA8817-3FF4-4796-85AD-C3DBDE0191DD</key>
+		<string>https://github.com/Yamm-Software/UAProgressView.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>UAProgressView-Example/UAProgressView-Example.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>74D442D5-6C39-43E8-9DBD-4EC95AF21215</key>
+		<key>28EA8817-3FF4-4796-85AD-C3DBDE0191DD</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/UrbanApps/UAProgressView.git</string>
+	<string>https://github.com/Yamm-Software/UAProgressView.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>74D442D5-6C39-43E8-9DBD-4EC95AF21215</string>
+	<string>28EA8817-3FF4-4796-85AD-C3DBDE0191DD</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>74D442D5-6C39-43E8-9DBD-4EC95AF21215</string>
+			<string>28EA8817-3FF4-4796-85AD-C3DBDE0191DD</string>
 			<key>IDESourceControlWCCName</key>
 			<string>UAProgressView</string>
 		</dict>

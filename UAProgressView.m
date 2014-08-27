@@ -166,7 +166,10 @@ NSString * const UAProgressViewProgressAnimationKey = @"UAProgressViewProgressAn
     animation.duration = self.animationDuration;
     animation.fromValue = @(self.progress);
     animation.toValue = @(progress);
-    animation.delegate = self;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    //    animation.delegate = self;
+    self.progressView.shapeLayer.strokeEnd = progress;
+    
     [self.progressView.layer addAnimation:animation forKey:UAProgressViewProgressAnimationKey];
     
     // Add timer to update valueLabel
@@ -242,7 +245,7 @@ NSString * const UAProgressViewProgressAnimationKey = @"UAProgressViewProgressAn
 #pragma mark - CAAnimationDelegate
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    [self.progressView updateProgress:_progress];
+    //    [self.progressView updateProgress:_progress];
     [self.valueLabelUpdateTimer invalidate];
     self.valueLabelUpdateTimer = nil;
 }
@@ -301,6 +304,14 @@ NSString * const UAProgressViewProgressAnimationKey = @"UAProgressViewProgressAn
 	
 }
 
+- (void)showProgress {
+    self.progressView.shapeLayer.hidden = NO;
+}
+
+- (void)hideProgress {
+    self.progressView.shapeLayer.hidden = YES;
+}
+
 @end
 
 #pragma mark - UACircularProgressView
@@ -338,7 +349,7 @@ NSString * const UAProgressViewProgressAnimationKey = @"UAProgressViewProgressAn
     CGFloat width = self.frame.size.width;
 	CGFloat borderWidth = self.shapeLayer.borderWidth;
     return [UIBezierPath bezierPathWithArcCenter:CGPointMake(width/2.0f, width/2.0f)
-                                          radius:width/2.0f - borderWidth - 0.5
+                                          radius:width/2.0f + (borderWidth / 2.0f) + 2.0 // - borderWidth
                                       startAngle:startAngle
                                         endAngle:endAngle
                                        clockwise:YES];

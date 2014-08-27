@@ -42,6 +42,7 @@
 		E6E248A519338352008ECC2B /* UAAdvancedExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UAAdvancedExampleViewController.h; path = "UAProgressView-Example/UAAdvancedExampleViewController.h"; sourceTree = SOURCE_ROOT; };
 		E6E248A619338352008ECC2B /* UAAdvancedExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UAAdvancedExampleViewController.m; path = "UAProgressView-Example/UAAdvancedExampleViewController.m"; sourceTree = SOURCE_ROOT; };
 		E6E248A8193388A9008ECC2B /* horn.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = horn.caf; path = "UAProgressView-Example/horn.caf"; sourceTree = SOURCE_ROOT; };
+		ED2988CB19AE3C6400931A58 /* UAProgressView.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = UAProgressView.podspec; path = ../UAProgressView.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +63,7 @@
 		E6230C3C193296D400669726 = {
 			isa = PBXGroup;
 			children = (
+				ED2988CB19AE3C6400931A58 /* UAProgressView.podspec */,
 				E6230C4E193296D400669726 /* UAProgressView-Example */,
 				E6230C47193296D400669726 /* Frameworks */,
 				E6230C46193296D400669726 /* Products */,
@@ -146,9 +148,9 @@
 		E6230C3D193296D400669726 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = UA;
+				CLASSPREFIX = YSO;
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "Urban Apps";
+				ORGANIZATIONNAME = "Yamm Software";
 			};
 			buildConfigurationList = E6230C40193296D400669726 /* Build configuration list for PBXProject "UAProgressView-Example" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -281,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -313,7 +315,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
