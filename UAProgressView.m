@@ -15,6 +15,8 @@ NSString * const UAProgressViewProgressAnimationKey = @"UAProgressViewProgressAn
 - (void)updateProgress:(float)progress;
 - (CAShapeLayer *)shapeLayer;
 
+@property (assign) BOOL isClockwise;
+
 @end
 
 @interface UAProgressView () <UIGestureRecognizerDelegate>
@@ -48,6 +50,7 @@ NSString * const UAProgressViewProgressAnimationKey = @"UAProgressViewProgressAn
 - (void)sharedSetup {
 	self.progressView = [[UACircularProgressView alloc] initWithFrame:self.bounds];
 	self.progressView.shapeLayer.fillColor = [UIColor clearColor].CGColor;
+    self.progressView.isClockwise = YES;
 	[self addSubview:self.progressView];
 	
 	[self resetDefaults];
@@ -98,6 +101,12 @@ NSString * const UAProgressViewProgressAnimationKey = @"UAProgressViewProgressAn
 		_centralView = centralView;
 		[self addSubview:self.centralView];
 	}
+}
+
+- (void)setClockwise:(BOOL)clockwise {
+   
+    self.progressView.isClockwise = clockwise;
+    
 }
 
 #pragma mark - Color
@@ -344,7 +353,17 @@ NSString * const UAProgressViewProgressAnimationKey = @"UAProgressViewProgressAn
 - (UIBezierPath *)layoutPath {
     const double TWO_M_PI = 2.0 * M_PI;
     const double startAngle = 0.75 * TWO_M_PI;
-    const double endAngle = startAngle + TWO_M_PI;
+   
+    double endAngle;
+   
+    NSLog(@"IS Clockwise? %@", self.isClockwise? @"YES" : @"NO");
+    
+    if (self.isClockwise) {
+        endAngle = startAngle + TWO_M_PI; //clockwise, we add 2pi
+    } else {
+        endAngle = startAngle - TWO_M_PI; //counterclockwise, subtract 2pi
+    }
+    
     
     CGFloat width = self.frame.size.width;
 	CGFloat borderWidth = self.shapeLayer.borderWidth;
@@ -352,7 +371,7 @@ NSString * const UAProgressViewProgressAnimationKey = @"UAProgressViewProgressAn
                                           radius:width/2.0f + (borderWidth / 2.0f) + 2.0 // - borderWidth
                                       startAngle:startAngle
                                         endAngle:endAngle
-                                       clockwise:YES];
+                                       clockwise:self.isClockwise];
 }
 
 - (void)updateProgress:(float)progress {
