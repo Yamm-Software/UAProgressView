@@ -15,6 +15,8 @@ NSString * const UAProgressViewProgressAnimationKey = @"UAProgressViewProgressAn
 - (void)updateProgress:(float)progress;
 - (CAShapeLayer *)shapeLayer;
 
+@property (assign) BOOL isClockwise;
+
 @end
 
 @interface UAProgressView () <UIGestureRecognizerDelegate>
@@ -48,6 +50,7 @@ NSString * const UAProgressViewProgressAnimationKey = @"UAProgressViewProgressAn
 - (void)sharedSetup {
 	self.progressView = [[UACircularProgressView alloc] initWithFrame:self.bounds];
 	self.progressView.shapeLayer.fillColor = [UIColor clearColor].CGColor;
+    self.progressView.isClockwise = YES;
 	[self addSubview:self.progressView];
 	
 	[self resetDefaults];
