@@ -87,4 +87,6 @@
  */
 - (void)setProgress:(float)progress animated:(BOOL)animated;
 
+- (void)setClockwise:(BOOL)clockwise;
+
 @end

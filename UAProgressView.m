@@ -103,6 +103,12 @@ NSString * const UAProgressViewProgressAnimationKey = @"UAProgressViewProgressAn
 	}
 }
 
+- (void)setClockwise:(BOOL)clockwise {
+   
+    self.progressView.isClockwise = clockwise;
+    
+}
+
 #pragma mark - Color
 
 - (void)tintColorDidChange {
