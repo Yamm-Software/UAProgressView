@@ -175,7 +175,7 @@ NSString * const UAProgressViewProgressAnimationKey = @"UAProgressViewProgressAn
     animation.duration = self.animationDuration;
     animation.fromValue = @(self.progress);
     animation.toValue = @(progress);
-    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault];
     //    animation.delegate = self;
     self.progressView.shapeLayer.strokeEnd = progress;
     
